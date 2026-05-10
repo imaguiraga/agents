@@ -160,7 +160,7 @@ Build an application that uses function calling to integrate with external APIs 
 
 | Resource | What You'll Learn | Link |
 | :--- | :--- | :--- |
-| **Microsoft's AI Agents for Beginners** | 12 lessons from fundamentals to production | [github.com/microsoft/ai-agents-for-beginners](https://github.com/microsoft/ai-agents-for-beginners) |
+| **Microsoft's AI Agents for Beginners** | 18 lessons from fundamentals to production | [github.com/microsoft/ai-agents-for-beginners](https://github.com/microsoft/ai-agents-for-beginners) |
 | **shameemreza/agentic-ai-development** | Structured roadmap with Python basics to advanced projects | [github.com/shameemreza/agentic-ai-development](https://github.com/shameemreza/agentic-ai-development) |
 | **DeepLearning.AI - Agentic AI Patterns** | Andrew Ng course on reflection, tool use, multi-agent | [github.com/totola/agentic-ai-course](https://github.com/totola/agentic-ai-course) |
 
