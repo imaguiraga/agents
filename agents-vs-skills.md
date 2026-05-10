@@ -258,7 +258,7 @@ Here's how custom agents and skills work together in a real incident response sc
 ┌─────────────────────────────────────────────────────────────┐
 │  SRE Agent loads context from repo instructions:            │
 │  - "Runbooks are in /docs/runbooks"                         │
-│  - "Escalation policy: P1 → page manager after 15 min"    │
+│  - "Escalation policy: P1 → page manager after 15 min"      │
 └────────────────────────┬────────────────────────────────────┘
                          ▼
 ┌─────────────────────────────────────────────────────────────┐
@@ -286,7 +286,7 @@ Here's how custom agents and skills work together in a real incident response sc
 │                                                             │
 │  SRE Agent HANDOFF ───────────────► Database Admin Agent    │
 │  (transfers full context)           (Custom Agent)          │
-│                                     - Applies connection   │
+│                                     - Applies connection    │
 │                                       pool tuning skill     │
 │                                     - Executes fix script   │
 │                                     - Verifies recovery     │
@@ -294,11 +294,11 @@ Here's how custom agents and skills work together in a real incident response sc
                          ▼
 ┌─────────────────────────────────────────────────────────────┐
 │  Database Admin Agent HANDOFF ────► Code Reviewer Agent     │
-│  (for permanent fix)                  (Custom Agent)          │
+│  (for permanent fix)                  (Custom Agent)        │
 │                                     - Reviews PR with       │
 │                                       connection pool fix   │
-│                                     - Uses Security Scanning  │
-│                                       Skill to validate       │
+│                                     - Uses Security Scanning│
+│                                       Skill to validate     │
 └─────────────────────────────────────────────────────────────┘
 ```
 
