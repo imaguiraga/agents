@@ -387,20 +387,20 @@ Your model: `1 Intent → 1 Command`
 User: "Is my app secure?"
          │
          ▼
-┌─────────────────┐
+┌──────────────────┐
 │  Intent: Security│
 │  Assessment      │
-└────────┬────────┘
+└────────┬─────────┘
          │
-    ┌────┴────┐
-    ▼         ▼
-┌────────┐  ┌────────┐
-│ /security│  │ Copilot │
-│ -agent   │  │ (general)│
+    ┌────┴─────────┐
+    ▼              ▼
+┌───────────┐  ┌───────────┐
+│ /security │  │ Copilot   │
+│ -agent    │  │ (general) │
 │ (explicit)│  │ (implicit)│
-└────┬────┘  └────┬────┘
-     │            │
-     ▼            ▼
+└────┬──────┘  └────┬──────┘
+     │              │
+     ▼              ▼
 ┌────────────┐  ┌─────────────────┐
 │ Security   │  │ Auto-loads      │
 │ Reviewer   │  │ Security Skills │
@@ -412,7 +412,7 @@ User: "Is my app secure?"
 │ Orchestrates multiple skills:   │
 │ ├─ SAST Skill                   │
 │ ├─ Dependency Check Skill       │
-│ └─ Report Generation Skill       │
+│ └─ Report Generation Skill      │
 └─────────────────────────────────┘
 ```
 
@@ -439,14 +439,14 @@ Your model: Skills = instructions that agents use
 │  • resources/kql_cheatsheet.md          │
 │  • tools/connection_manager.py          │
 └─────────────────────────────────────────┘
-         │
-    ┌────┼────┐
-    ▼    ▼    ▼
-┌────┐ ┌────┐ ┌────┐
-│Sec │ │Gen │ │CLI │
-│Agent│ │Cop │ │Tool│
-│     │ │ilot│ │    │
-└────┘ └────┘ └────┘
+            │
+    ┌───────┼─────┐
+    ▼       ▼     ▼
+┌─────┐  ┌────┐ ┌────┐
+│Sec  │  │Gen │ │CLI │
+│Agent│  │Cop │ │Tool│
+│     │  │ilot│ │    │
+└─────┘  └────┘ └────┘
 ```
 
 ### Your Revised Mental Model
@@ -495,7 +495,7 @@ Here's a more accurate architecture:
 │              TOOL EXECUTION (within skills)                 │
 │                                                             │
 │  Query Analysis Skill ──► Python script ──► SQL parser lib  │
-│  Execution Plan Skill ──► Kusto query ────► Azure Monitor    │
+│  Execution Plan Skill ──► Kusto query ────► Azure Monitor   │
 │  Index Rec Skill ───────► Algorithm ─────► Schema metadata  │
 │  Report Gen Skill ──────► Template ──────► Markdown output  │
 └─────────────────────────────────────────────────────────────┘
@@ -600,30 +600,30 @@ Most real implementations use **iterative hybrid**:
 ```
 ┌─────────────────────────────────────────┐
 │  START: Identify business problem       │
-│  "Engineers spend 4 hrs/week on CI     │
+│  "Engineers spend 4 hrs/week on CI      │
 │   failures, need faster resolution"     │
 └─────────────────┬───────────────────────┘
                   ▼
 ┌─────────────────────────────────────────┐
 │  STEP 1: Agent-First (define persona)   │
 │  "CI Debugger Agent"                    │
-│  - Expert in GitHub Actions            │
-│  - Fixes failing workflows             │
-│  - Explains root cause                 │
+│  - Expert in GitHub Actions             │
+│  - Fixes failing workflows              │
+│  - Explains root cause                  │
 └─────────────────┬───────────────────────┘
                   ▼
 ┌─────────────────────────────────────────┐
 │  STEP 2: Skills-First (build tools)     │
 │  Discover we need:                      │
-│  ├─ Log Analysis Skill (exists?)       │
-│  │   → Yes: Reuse it!                  │
-│  │   → No: Build it                    │
-│  ├─ Workflow Editor Skill (exists?)    │
-│  │   → Yes: Reuse it!                  │
-│  │   → No: Build it                    │
-│  └─ Test Runner Skill (exists?)        │
-│     → Yes: Reuse it!                   │
-│     → No: Build it                    │
+│  ├─ Log Analysis Skill (exists?)        │
+│  │   → Yes: Reuse it!                   │
+│  │   → No: Build it                     │
+│  ├─ Workflow Editor Skill (exists?)     │
+│  │   → Yes: Reuse it!                   │
+│  │   → No: Build it                     │
+│  └─ Test Runner Skill (exists?)         │
+│     → Yes: Reuse it!                    │
+│     → No: Build it                      │
 └─────────────────┬───────────────────────┘
                   ▼
 ┌─────────────────────────────────────────┐
@@ -711,7 +711,7 @@ tools?       role needed?
 ### Real-World Example: Microsoft Copilot
 
 | Phase | What Happened | Approach |
-|-------|--------------|----------|
+|-------|---------------|----------|
 | **Year 1** | Built individual skills (Kusto, Azure CLI, GitHub) | **Skills-First** |
 | **Year 2** | Discovered patterns, grouped into agents (SRE, Security, Developer) | **Grouping** |
 | **Year 3** | Standardized skill spec (agentskills.io), skills work across all agents | **Platform** |
