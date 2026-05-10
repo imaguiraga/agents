@@ -71,23 +71,23 @@ my-skill/
 └─────────────────┬───────────────────────┘
                   ▼
     ┌─────────────────────────┐
-    │  Needs DB expertise?    │────Yes────┐
+    │  Needs DB expertise?    │────Yes─────┐
     └─────────────────────────┘            ▼
-    ┌─────────────────────────┐    ┌───────────────┐
+    ┌─────────────────────────┐         ┌───────────────┐
     │  Needs KQL execution?   │───Yes──►│ Kusto Skill   │
-    └─────────────────────────┘    │  (auto-loaded) │
-    ┌─────────────────────────┐    └───────────────┘
-    │  Needs deep DB analysis?│───Yes──►┌─────────────────┐
+    └─────────────────────────┘         │ (auto-loaded) │
+    ┌─────────────────────────┐         └───────────────┘
+    │  Needs deep DB analysis?│───Yes──►┌──────────────────┐
     └─────────────────────────┘         │ /database-expert │
                                         │  (custom agent)  │
                                         │  (explicit call) │
-                                        └─────────────────┘
+                                        └──────────────────┘
 ```
 
 ### When to Use What
 
 | Scenario | Recommendation | Reason |
-|----------|---------------|--------|
+|----------|----------------|--------|
 | Team has standard troubleshooting procedures | **Agent Skill** | Reusable across all agents, maintains consistency |
 | Need a dedicated security expert persona | **Custom Agent** | Deep specialization, consistent identity |
 | Want to add Python execution capability | **Agent Skill** | Capability augmentation, composable |
@@ -98,7 +98,7 @@ my-skill/
 ### Key Architectural Difference
 
 | Aspect | Agent Skills | Custom Agents |
-|--------|-----------|---------------|
+|--------|--------------|---------------|
 | **Mental Model** | *"What can the agent **do**?"* | *"Who is the agent **being**?"* |
 | **Analogy** | Programming libraries/modules | Specialized team members/roles |
 | **Extensibility** | Add capabilities to existing agents | Create new agent identities |
