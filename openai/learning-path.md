@@ -160,7 +160,7 @@ Build an application that uses function calling to integrate with external APIs 
 
 | Resource | What You'll Learn | Link |
 | :--- | :--- | :--- |
-| **Microsoft's AI Agents for Beginners** | 10 lessons from fundamentals to production | [github.com/priyankavergadia/ai-agents-for-beginners](https://github.com/priyankavergadia/ai-agents-for-beginners) |
+| **Microsoft's AI Agents for Beginners** | 18 lessons from fundamentals to production | [github.com/microsoft/ai-agents-for-beginners](https://github.com/microsoft/ai-agents-for-beginners) |
 | **shameemreza/agentic-ai-development** | Structured roadmap with Python basics to advanced projects | [github.com/shameemreza/agentic-ai-development](https://github.com/shameemreza/agentic-ai-development) |
 | **DeepLearning.AI - Agentic AI Patterns** | Andrew Ng course on reflection, tool use, multi-agent | [github.com/totola/agentic-ai-course](https://github.com/totola/agentic-ai-course) |
 
@@ -442,3 +442,21 @@ npx @koderspa/mcp-skills@latest
 # Clone official skill collections
 git clone https://github.com/anthropics/skills
 git clone https://github.com/openai/skills
+```
+
+---
+
+Next Steps After This Path
+
+Once you complete all phases, consider exploring:
+
+· MCP (Model Context Protocol): Building custom tool servers
+· MCP Apps: Open-ended Generative UI with iframe-based components
+· Open-JSON-UI: OpenAI's declarative UI specification
+· Semantic Kernel: Microsoft's enterprise-focused framework (.NET/TypeScript)
+· AG-UI Dojo: Interactive protocol testing environment
+· Skill Marketplaces: agentskill.sh (44k+ skills), SkillsMP for discovering community skills
+
+---
+
+This document is a living guide. As frameworks evolve, check official documentation for the latest updates.
